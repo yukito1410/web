@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>伝言板</title>
+    <script>
+function 伝言する() {
+  if (入力内容.value === "") {
+    alert("内容を入力してください");
+  } else {
+    伝言エリア.innerText = 入力内容.value;
+    alert("伝言をセットしました");
+  }
+}
+function クリアする() {
+  const result = window.confirm("本当にクリアしますか?");
+  if (result) {
+    伝言エリア.innerText = "伝言はまだありません";
+  }
+}
+</script>
+ </head>
+  <body>
+    <h1>伝言板</h1>
+    <p id="伝言エリア">伝言はまだありません</p>
+    <input id="入力内容"><br><button onclick="伝言する();">セット</button>
+    <button onclick="クリアする();">クリアする</button>
+  </body>
+
+
+</html>
